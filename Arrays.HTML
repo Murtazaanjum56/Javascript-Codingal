@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <style>
+            body {
+                background-color: aqua;
+            }
+
+            p {
+
+            }
+        </style>
+    </head>
+    <body>
+        <p id="result"></p>
+        <p id="result2"></p>
+        <p id="result3"></p>
+        <p id="result4"></p>
+        <p id="result5"></p>
+        <p id="result6"></p>
+        <p id="result7"></p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <p id="join"></p>
+        <p id="join1"></p>
+    
+
+        <script>
+            var city = [
+                "London",
+                "Mumbai",
+                "Dubai",
+                "New York",
+                "Sydney",
+                "Rome",
+                "Paris"
+            ];
+
+            document.getElementById("result").innerHTML = city[0]
+            document.getElementById("result2").innerHTML = city[1]
+            document.getElementById("result3").innerHTML = city[2]
+            document.getElementById("result4").innerHTML = city[3]
+            document.getElementById("result5").innerHTML = city[4]
+            document.getElementById("result6").innerHTML = city[5]
+            document.getElementById("result7").innerHTML = city[6]
+
+
+
+            var country = [
+                "Pakistan",
+                "India",
+                "Bangladesh",
+                "Nepal",
+                "Bhutan",
+                "Sri Lanka",
+                "Maldives"
+            ]
+
+            document.getElementById("join").innerHTML = country.join(" * ");
+            document.getElementById("join1").innerHTML = country;
+            country.pop();
+            document.getElementById("join2").innerHTML = country.join(" * ");
+         
+
+        
+        </script>
+    </body>
+</html>
