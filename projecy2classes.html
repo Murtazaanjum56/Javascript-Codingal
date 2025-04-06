@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+
+<html>
+
+<body>
+
+<p id="hello"></p>
+
+<p id="hi"></p>
+
+<p id="welcome"></p>
+
+<script>
+
+class student{
+
+constructor(name){
+
+this.studentname=name;
+
+}
+
+static hello(){
+
+return "hello";
+
+}
+
+static welcome(){
+
+return "Welcome";
+
+}
+
+hi(){
+
+return "Hi" + this.studentname;
+
+}
+
+}
+
+myname = new student("Carol")
+
+document.getElementById("hello").innerHTML= student.hello();
+
+document.getElementById("hi").innerHTML=myname.hi();
+
+document.getElementById("welcome")= student.welcome(myname);
+
+</script>
+
+</body>
+
+</html>
