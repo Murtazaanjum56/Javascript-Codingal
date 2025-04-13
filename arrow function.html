@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+     <body>
+        <h1>Arrow functions</h1>
+        <p>this shows an example of an arrow function with
+            a parameter
+        </p>
+        <p id="result"></p>
+
+        <script>
+            add = (a,b)    =>
+             a + b;
+            document.getElementById("result").innerHTML = add(4, 6);
+        </script>
+
+        <h1>Part 2</h1>
+        <p id="result1"></p>
+        <script>
+            area = (l, w) => l * w;
+            document.getElementById("result1").innerHTML = area(4, 6);
+        </script>
+
+        <h1>Rhombus</h1>
+        <p id="area1"></p>
+        <p id="prem"></p>
+        <script>
+            area = (l, w) => l * w;
+            prem = (s) => s * 4;
+            document.getElementById("area1").innerHTML = area(4, 7);
+            document.getElementById("prem").innerHTML = prem(4);
+        </script>
+     </body>
+</html>
