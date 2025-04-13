@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <h1>Sort Array Homework</h1>
+        <button onclick="as()">ascending</button>
+        <button onclick="ds()"ds>Descending</button>
+        <p id="result"></p>
+        <script>
+            var point = [1, 22, 4,  3, 5, 66];
+            function as(){
+                point.sort(function(a, b){ return a - b});
+                document.getElementById("result").innerHTML = point;
+            }
+
+            function ds(){
+                point.sort(function(a, b){return b - a});
+                document.getElementById("result").innerHTML = point;
+
+            }
+        </script>
+
+        <h1>Mapping</h1>
+        <p id="result2"></p>
+        <script>
+            var numbers = [10, 20, 30, 40, 50,];
+            function mul(num){
+                return num * 10;
+        }
+
+        var arraynum = numbers.map(mul);
+        document.getElementById("result2").innerHTML = arraynum;
+        </script>
+
+    </body>
+</html>
