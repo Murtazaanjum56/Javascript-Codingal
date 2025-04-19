@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<body>
+    <p id="result"></p>
+
+    <button onclick="mul()">Multiply</button>
+    <button onclick="div()">Divide</button>
+    <button onclick="Subtract()">Subtract</button>
+    <button onclick="add()">Sum</button>
+
+    <script>
+        var num1 = 3;
+        var num2 = 2;
+    
+        function add() {
+          
+            document.getElementById("result").innerHTML = num1 + num2;
+        }
+
+        function Subtract() {
+        document.getElementById("result").innerHTML = num1 - num2;
+        }
+
+        function mul(){
+            document.getElementById("result").innerHTML = num1 * num2;
+        }
+
+        function div(){
+            document.getElementById("result").innerHTML = num1 / num2;
+        }
+    </script>
+    
+</body>
+</html>
