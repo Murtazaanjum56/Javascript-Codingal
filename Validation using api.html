@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+   <body>
+    <p>enter a number and click 0k: </p>
+    <input id="id1" type="number" min="100" max="300" placeholder="Enter a number" required>
+    <button onclick="myfunction()">Ok</button>
+    <p>if number is less than 10o or greater than 300 thenan error will
+        be displayed</p>
+    <p id="display"></p>
+    <script>
+function myfunction() {
+    var dis = document.getElementById("id1");
+    if (!dis.checkValidity()) {
+document.getElementById("display").innerHTML = dis.validationMessage;
+    } else {
+        document.getElementById("display").innerHTML = "Input ok"
+    }
+    }
+
+
+    </script>
+   </body>
+</html>

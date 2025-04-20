@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script>
+            function validate(){
+                let x = document.forms["myForms"]["frame"].value;
+            if (x == "" ){
+        mes = document.getElementById("message");
+        mes.textContent = "Please enter your name";
+                return false
+            } else {
+                mess.textContent = "";
+                return true;
+            }
+            }
+        </script>
+        <body>
+            <form name="myForms">
+                <p>Enter name: </p> <input type="text" name="frame" id="frame" placeholder="Enter your name"><br>
+                <input type="submit" value="Submit">
+            </form>
+<p id="message"></p>
+        </body>
+    </head>
+</html>
