@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+    <head>
+<title>stop watch</title>
+<meta charset="utf-8">
+<style>
+    body {
+        background-color: brown;
+        text-align: center;
+        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        padding-top: 100px;
+}
+button {
+    background-color: green;
+    margin: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+    color: white;
+    border: solid 2px black;
+
+}
+button:hover {
+    background-color: lightgreen;
+    color: black;
+    font-size: 20px;
+}
+div{
+    font-size: 50px;
+}
+</style>
+    </head>
+    <body>
+        <h1>Stop Watch</h1>
+        <div id="display">00:00:00</div>
+        <button id="start">Start</button>
+        <button id="stop">Stop</button>
+        <button id="reset">Reset</button>
+
+       
+<script>
+
+    let startTime, interval;
+    
+    let elapsed =0;
+    
+    function updateDisplay(){
+    
+    const time=Date.now()-startTime+elapsed;
+    
+    const seconds = Math.floor(time/1000)%60;
+    
+    const minutes = Math.floor(time/(1000*60))%60;
+    
+    const hours = Math.floor(time/(1000*60*60));
+    
+    document.getElementById("display").textContent= String(hours).padStart(2,'0')+":"+
+    
+    String(minutes).padStart(2,'0')+":"+
+    
+    String(seconds).padStart(2,'0');
+    
+    
+    }
+    
+    function start(){
+    
+    if (!interval){
+    
+    startTime=Date.now();
+    
+    interval=setInterval(updateDisplay,1000);
+    
+    }
+    
+    }
+    
+    function stop(){
+    
+    if(interval){
+    
+    clearInterval(interval);
+    
+    elapsed+=Date.now()-startTime;
+    
+    interval=null;
+    
+    }
+    
+    }
+    
+    function reset(){
+    
+    clearInterval(interval);
+    
+    interval=null;
+    
+    elapsed=0;
+    
+    document.getElementById("display").textContent="00:00:00";
+    
+    }
+    
+    document.getElementById("start").addEventListener("click", start);
+    document.getElementById("stop").addEventListener("click", stop);
+    document.getElementById("reset").addEventListener("click", reset);
+    
+    </script>
+    </body>
+</html>
